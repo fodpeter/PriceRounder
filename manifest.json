@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "name": "Price normalizer",
+  "version": "1.1.0",
+  "description": "Price normalizer app, which helps you recognize the real price of things.",
+
+  "browser_action": {
+    "name": "Manipulate DOM",
+    "icons": ["icon.png"],
+    "default_icon": "icon.png",
+    "default_title": "Price normalizer"
+  },
+  "content_scripts": [ {
+    "js": [ "jquery-2.2.2.min.js", "findAndReplaceDOMText.js", "background.js" ],
+    "matches": [ "http://*/*", "https://*/*"]
+  }],
+  "author": "Barack",
+
+  "applications": {
+    "gecko": {
+      "id": "peter@barackmag.no-ip.org"
+    }
+  },
+
+  "homepage_url": "http://barack.no-ip.com",
+  "offline_enabled": true,
+  "short_name": "Pricer",
+
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ]
+
+}
