@@ -1,3 +1,3 @@
 #!/bin/sh
 
-7z a price.xpi manifest.json *.js *.png *.jpg
+7z a price.xpi script/manifest.json script/*.js script/*.png
