@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Price rounder tests</title>
+ 
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.23.0.css">
+  <script src="https://code.jquery.com/qunit/qunit-1.23.0.js"></script>
+  <script src="../script/rounder.js"></script>
+ 
+  <script>
+  QUnit.test("stays the same", function( assert ) {
+    assert.equal(roundUp('0'), "0");
+    assert.equal(roundUp('0.0'), "0.0");
+    assert.equal(roundUp('0,0'), "0,0");
+    assert.equal(roundUp('1'), "1");
+    assert.equal(roundUp('8'), "8");
+    assert.equal(roundUp('2.50'), "2.50");
+    assert.equal(roundUp('4.15'), "4.15");
+    assert.equal(roundUp('4.80'), "4.80");
+    assert.equal(roundUp('5.1'), "5.1");1
+  });
+  QUnit.test("number is rounded", function( assert ) {
+    assert.equal(roundUp('9'), "10");
+    assert.equal(roundUp('99'), "100");
+    assert.equal(roundUp('199'), "200");
+    assert.equal(roundUp('349'), "350");
+    assert.equal(roundUp('499'), "500");
+    assert.equal(roundUp('1.95'), "2");
+    assert.equal(roundUp('3.95'), "4");
+    assert.equal(roundUp('4.9'), "5");
+    assert.equal(roundUp('4.90'), "5");
+    assert.equal(roundUp('49.45'), "50");
+    assert.equal(roundUp('79.50'), "80");
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="qunit"></div>
+ 
+</body>
+</html>

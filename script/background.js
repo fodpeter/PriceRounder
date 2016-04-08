@@ -4,12 +4,18 @@
 
  $("body").append('Test2');
 
+var numberPattern = /\d+((\.|\,)\d+)?/g;
+
 findAndReplaceDOMText(document, {
-	find: /\d*9?/g,
+	find: numberPattern,
 	replace: function(portion) {
-		var el = document.createElement('span');
-		el.setAttribute('class', 'tooltip');
-		el.innerHTML = (parseInt(portion.text)+1) + '<span class="tooltiptext" style="color:gray">['+portion.text+']</span>';
-		return el;
+		let rounded = roundUp(portion.text);
+		if (rounded == portion.text) {
+			return portion.text;
+		} else {
+			let el = document.createElement('span');
+			el.innerHTML = rounded + '<span style="color:gray">['+portion.text+']</span>';
+			return el;
+		}
 	}
 });
