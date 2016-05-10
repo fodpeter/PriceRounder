@@ -1,21 +1,26 @@
 # Price rounder
 
-## Description:
+## Description
 
 A browser plugin for Google Chrome and Firefox to round up prices to next integer. This plugin neutralizes the common marketing trick of price tags. When the price is `9.99` it will show `10 [9.99]`.
 
-## Usage:
+## Example screenshots
+Example from http://digitec.ch:
+
+![Digitec](./examples/digitec.png)
+
+## Usage
 
 1.   Open Chrome
 2.   Open Settings / Extension
 3.   Enable `Developer mode`
 4.   Select the `script` directory in `Load unpacked extension...`
 
-![Chrome config](exmaples/chrome.png)
+![Chrome config](./examples/chrome.png)
 
-## Example screenshots
-Example from digitec.ch
-![Digitec](exmaples/digitec.png)
-
-## Known issues:
+## Known issues
 Every number is rounded not jut the price tags :)
+
+## Credits
+
+Thank you very much to James Padolsey http://james.padolsey.com for the very useful findAndReplaceDOMText function.
