@@ -2,8 +2,6 @@
 
 /*global chrome:false */
 
- $("body").append('Test2');
-
 var numberPattern = /\d+((\.|\,)\d+)?/g;
 
 findAndReplaceDOMText(document, {

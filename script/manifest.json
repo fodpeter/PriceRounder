@@ -1,34 +1,29 @@
 {
   "manifest_version": 2,
-  "name": "Price normalizer",
+  "name": "PriceRounder",
   "version": "1.1.0",
-  "description": "Price normalizer app, which helps you recognize the real price of things.",
+  "description": "A browser plugin which rounds up prices to next integer.",
 
   "browser_action": {
     "name": "Manipulate DOM",
     "icons": ["icon.png"],
     "default_icon": "icon.png",
-    "default_title": "Price normalizer"
+    "default_title": "Price rounder"
   },
   "content_scripts": [ {
-    "js": [ "jquery-2.2.2.min.js", "findAndReplaceDOMText.js", "rounder.js", "background.js" ],
+    "js": [ "findAndReplaceDOMText.js", "rounder.js", "background.js" ],
     "matches": [ "http://*/*", "https://*/*"]
   }],
-  "author": "Barack",
+  "author": "Peter",
 
   "applications": {
     "gecko": {
-      "id": "peter@barackmag.no-ip.org"
+      "id": "fodpeter@gmail.com"
     }
   },
 
   "homepage_url": "http://barack.no-ip.com",
   "offline_enabled": true,
-  "short_name": "Pricer",
-
-  "permissions": [
-    "activeTab",
-    "tabs"
-  ]
+  "short_name": "PriceRounder"
 
 }
