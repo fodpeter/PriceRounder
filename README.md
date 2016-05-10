@@ -5,9 +5,25 @@
 A browser plugin for Google Chrome and Firefox to round up prices to next integer. This plugin neutralizes the common marketing trick of price tags. When the price is `9.99` it will show `10 [9.99]`.
 
 ## Example screenshots
-Example from http://digitec.ch:
+* Digitec example from http://digitec.ch:
 
-![Digitec](./examples/digitec.png)
+Rounded:
+  
+![digitec rounded](examples/digitec_rounded.png)
+
+Original:
+
+![digitec original](examples/digitec_original.png)
+
+* eBay example from http://ebay.com:
+
+Rounded:
+
+![ebay rounded](examples/ebay_rounded.png)
+
+Original:
+
+![ebay orignal](examples/ebay_original.png)
 
 ## Usage
 
@@ -16,7 +32,11 @@ Example from http://digitec.ch:
 3.   Enable `Developer mode`
 4.   Select the `script` directory in `Load unpacked extension...`
 
-![Chrome config](./examples/chrome.png)
+![Chrome config](examples/chrome_settings.png)
+
+### Tests
+
+Have a look at [QUnit tests](test/test.html)
 
 ## Known issues
 Every number is rounded not jut the price tags :)
